@@ -1,0 +1,28 @@
+.carousel-button {
+  /* Щоб кнопки не стискалися з картками */
+  flex-shrink: 0;
+  /* Центруємо іконку */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  /* Щоб елемент був круглим */
+  border-radius: 50%;
+  /* Віднуляємо те, що додав браузер */
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  /* Колір іконки (наслідується з button для arrow) */
+  fill: var(--color-primary-dark);
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+    /* Іконка */
+    fill: var(--color-primary-light);
+  }
+
+  &.next {
+    transform: rotate(180deg);
+  }
+}
